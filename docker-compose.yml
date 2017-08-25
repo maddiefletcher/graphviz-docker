@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  graphviz:
+    build: .
+    image: "markfletcher/graphviz"
+    command: dot -Tpng -oHelloWorld.png HelloWorld.dot
+    volumes:
+      - .:/graphviz
